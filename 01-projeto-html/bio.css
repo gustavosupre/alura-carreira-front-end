@@ -3,6 +3,13 @@ body {
 	background-color: #F2FFFC;
 	font-size: 120%;
 	line-height: 1.5;
+	margin: 0;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
 }
 
 h1, h2 {
@@ -10,6 +17,7 @@ h1, h2 {
 }
 
 main h1 {
+	font-size: 60px;
 	text-align: center;
 	background-color: #851944;
 	color: #FFF;
@@ -19,6 +27,7 @@ main h1 {
 
 p {
 	text-align: justify;
+	margin: 20px 0;
 }
 
 blockquote {
@@ -26,11 +35,16 @@ blockquote {
 	border: 10px solid #C2CCCA;
 	width: 250px;
 	box-sizing: border-box;
+	margin: 20px 40px;
 }
 
 aside {
 	background-color: #3C1D3D;
 	color: #F2FFFC;
+}
+aside h1 {
+	font-size: 30px;
+	margin: 25px;
 }
 
 footer {
@@ -57,9 +71,21 @@ blockquote, aside, footer {
 
 main div {
 	width: 720px;
-	margin: auto;
+	margin: 30px auto;
 }
 
 aside {
 	text-align: center;
+}
+.icones-redes-sociais li {
+	display: inline-block;
+}
+h2 {
+	font-size: 30px;
+}
+
+article {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
