@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Seletores</title>
+</head>
+<body>
+    <h1>Seletores</h1>
+
+    <p><img src="../img/eu.jpg" alt="Foto bonita" class="foto-destaque"></p>
+    <p><img src="../img/eu.jpg"></p>
+
+    <style>
+        .foto-destaque {border: 5px solid red;}
+        [src$='.jpg'] {border-bottom: 30px solid blue;}
+        [alt$='bonita'] {border-top: 15px solid orange;}
+        [class='foto-destaque'] {box-shadow: 5px 5px 5px rgba(0,0,0,0.5);}
+        [class^='foto'] {border-right: 20px dotted black}
+        [alt] {border-left: 30px dashed pink;}
+    </style>
+</body>
+</html>
