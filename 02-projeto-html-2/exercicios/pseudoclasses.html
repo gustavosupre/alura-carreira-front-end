@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudoclasses</title>
+</head>
+<body>
+
+    <h1>Pseudocasses</h1>
+
+    <p>
+        <table class="tabela01">
+
+            <thead>
+            <tr>
+                <td>Tecnologia</td>
+                <td>Versão</td>
+                <td>Uso</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>5</td>
+                <td>Conteúdo</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>3</td>
+                <td>Estilo</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>5</td>
+                <td>Interação</td>
+            </tr>
+            <tr>
+                <td>SVG</td>
+                <td>1.1</td>
+                <td>Imagem</td>
+            </tr>
+            <tr>
+                <td>PHP</td>
+                <td>7</td>
+                <td>Back-end</td>
+            </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        <ul class="paginacao">
+                            <li>1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </p>
+
+    <style>
+        .tabela01 {width: 100%; background-color: #FFF; margin: 0; padding: 0; border-spacing: 0; font-family: sans-serif;}
+        .tabela01 thead {background-color: rgba(0,0,0,0.6); color: #FFF; font-weight: bold; text-transform: uppercase;}
+        .tabela01 thead td {padding: 10px;}
+
+        .tabela01 tbody td {padding: 5px;}
+        .tabela01 tbody tr:nth-child(odd) {background-color: #FFF;}
+        .tabela01 tbody tr:nth-child(even) {background-color: rgba(0,0,0,0.1);}
+        .tabela01 tbody tr:hover {background-color: rgba(0,0,0,0.3);}
+
+        .tabela01 tfoot tr {background-color: rgba(0,0,0,0.4);}
+        .tabela01 tfoot td {padding: 10px; text-align: center;}
+        .tabela01 tfoot td ul, .tabela01 tfoot td li {display: inline-block; margin: 0; padding: 0;}
+        .tabela01 tfoot td li a {padding: 5px; background-color: black; color: #FFF;}
+        
+
+    </style>
+</body>
+</html>
