@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Background</title>
+
+</head>
+<body>
+
+    <div class="back-reto um"></div>
+    <div class="back-reto dois"></div>
+    <div class="back-reto tres"></div>
+    <div class="back-reto quatro"></div>
+    <div class="back-reto cinco"></div>
+    <div class="back-reto seis"></div>
+
+    <div class="back-radial sete"></div>
+    <div class="back-radial oito"></div>
+    <div class="back-radial nove"></div>
+    
+    <style>
+        html, body {width: 100%; height: 100%; margin: 0;}
+        div {margin: 0; padding: 0; margin-bottom: 1%;}
+        .back-reto {height: 500px; }
+        .back-radial {width: 500px; height: 500px; margin: 0 auto; margin-bottom: 1%;}
+
+        .um {
+            background-image: linear-gradient(red, grey 80%, black);
+            background-size: 50% 200px;
+            background-repeat: no-repeat;
+            background-color: orange;
+        }
+        .dois {
+            background-image: linear-gradient(135deg, red, red 13.5px, black 14.5px, red 14.5px, red);
+            background-size: 20px 20px;
+            background-repeat: repeat;
+        }
+        .tres {
+            background-image: linear-gradient(to bottom left, transparent, transparent 5px, black 6px, black 7px, transparent 8px, transparent 19.1px, black 20.1px, black 21.1px, transparent 22.1px);
+            background-color: red;
+            background-size: 20px 20px;
+            background-repeat: repeat;
+        }
+        .quatro {
+            background-image: linear-gradient(to bottom, red, red 9px, black 10px, black 20px, red 20px, red);
+            background-size: 20px 20px;
+            background-repeat: repeat;
+            background-attachment: fixed;
+        }
+        .cinco {
+            background-image: linear-gradient(to right, red, red 9px, black 10px, black 20px, red 20px, red);
+            background-size: 20px 20px;
+            background-repeat: repeat;
+        }
+        .seis {
+            background-color: #FFF;;
+            background-image: linear-gradient(to right, transparent, red, transparent);
+            background-size: 50% 5px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .sete {
+            background-image: radial-gradient(yellow, red);
+        }
+        .oito {
+            background-image: radial-gradient(circle at top right, yellow, red);
+        }
+        .nove {
+            background-image: radial-gradient(ellipse at bottom right,
+                                                                yellow,
+                                                                yellow 20%,
+                                                                black 20%,
+                                                                black 30%,
+                                                                yellow 30%,
+                                                                yellow);
+        }
+    </style>
+
+</body>
+</html>
