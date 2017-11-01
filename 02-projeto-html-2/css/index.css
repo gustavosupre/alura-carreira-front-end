@@ -243,21 +243,15 @@ body {
     font-family: "Open Sans Condensed", sans-serif;
 }
 .blog .inicio-post {
-    display: none;
     position: absolute;
     top: 4em;
-    height: 9em;
+    height: 8em;
     left: 30%;
     right: 4em;
     background-color: #F2FFFC;
     color: #000;
     padding: 1.5em;
-}
-.blog .mais-recente {
-    background-color: #F2FFFC;
-}
-.blog .mais-recente a {
-    color: #F26;
+    display: none;
 }
 .blog a:hover + .inicio-post,
 .blog a:focus + .inicio-post {

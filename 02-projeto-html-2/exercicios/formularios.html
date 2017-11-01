@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulários</title>
+</head>
+<body>
+
+    <section>
+        <h1>Formulários</h1>
+        <cite><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/Input">Mais informações e compatibilidade</a></cite>
+    </section>
+    <form>
+
+        <fieldset>
+            <legend>Trabalhando com datas</legend>
+
+            <label for="date">date</label>
+            <input id="date" name="date" type="date">
+
+            <label for="datetime">datetime</label>
+            <input id="datetime" name="datetime" type="datetime">
+
+            <label for="datetime-local">datetime-local</label>
+            <input id="datetime-local" name="datetime-local" type="datetime-local">
+
+            <label for="datetime-local">month</label>
+            <input id="month" name="month" type="month">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>numeros</legend>
+
+            <label for="number">number</label>
+            <input id="number" name="number" type="number">
+
+            <label for="range">range</label>
+            <input id="range" name="range" type="range">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Image</legend>
+
+            <label for="image">image</label>
+            <input id="image" name="image" type="image">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>pattern</legend>
+
+            <label for="pattern">pattern</label>
+            <input id="pattern" name="pattern" type="text" pattern="[A-Za-z ']{4,}" title="O campo precisa ter ao menos 4 caracteres">
+
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <style>
+        section {margin: 2em 0;}
+        h1 {margin-bottom: 0;}
+        fieldset {margin-bottom: 2em;}
+        label, input {display: block;}
+    </style>
+</body>
+</html>
