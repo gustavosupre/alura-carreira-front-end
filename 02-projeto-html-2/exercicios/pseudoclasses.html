@@ -8,62 +8,114 @@
 </head>
 <body>
 
-    <h1>Pseudocasses</h1>
+    <h1>Pseudoclasses</h1>
 
     <p>
         <table class="tabela01">
 
             <thead>
             <tr>
-                <td>Tecnologia</td>
-                <td>Versão</td>
-                <td>Uso</td>
+                <td title="Tecnologia"></td>
+                <td title="Versão"></td>
+                <td title="Uso"></td>
             </tr>
             </thead>
 
             <tbody>
-            <tr>
-                <td>HTML</td>
-                <td>5</td>
-                <td>Conteúdo</td>
-            </tr>
-            <tr>
-                <td>CSS</td>
-                <td>3</td>
-                <td>Estilo</td>
-            </tr>
-            <tr>
-                <td>JavaScript</td>
-                <td>5</td>
-                <td>Interação</td>
-            </tr>
-            <tr>
-                <td>SVG</td>
-                <td>1.1</td>
-                <td>Imagem</td>
-            </tr>
-            <tr>
-                <td>PHP</td>
-                <td>7</td>
-                <td>Back-end</td>
-            </tr>
+
+                <tr>
+                    <td>HTML</td>
+                    <td>5</td>
+                    <td>Conteúdo</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>3</td>
+                    <td>Estilo</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>5</td>
+                    <td>Interação</td>
+                </tr>
+                <tr>
+                    <td>SVG</td>
+                    <td>1.1</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>7</td>
+                    <td>Back-end</td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>5</td>
+                    <td>Conteúdo</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>3</td>
+                    <td>Estilo</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>5</td>
+                    <td>Interação</td>
+                </tr>
+                <tr>
+                    <td>SVG</td>
+                    <td>1.1</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>7</td>
+                    <td>Back-end</td>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>5</td>
+                    <td>Conteúdo</td>
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>3</td>
+                    <td>Estilo</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>5</td>
+                    <td>Interação</td>
+                </tr>
+                <tr>
+                    <td>SVG</td>
+                    <td>1.1</td>
+                    <td>Imagem</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>7</td>
+                    <td>Back-end</td>
+                </tr>
+
             </tbody>
 
             <tfoot>
                 <tr>
                     <td colspan="3">
-                        <ul class="paginacao">
-                            <li>1</li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li><a href="#">10</a></li>
-                        </ul>
+                        <div class="paginacao">
+                            <a>1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                        </div>
                     </td>
                 </tr>
             </tfoot>
@@ -71,20 +123,29 @@
     </p>
 
     <style>
+        /*td:nth-child(n+3) {color: orange;}*/
         .tabela01 {width: 100%; background-color: #FFF; margin: 0; padding: 0; border-spacing: 0; font-family: sans-serif;}
         .tabela01 thead {background-color: rgba(0,0,0,0.6); color: #FFF; font-weight: bold; text-transform: uppercase;}
         .tabela01 thead td {padding: 10px;}
+        .tabela01 thead td:first-child{text-decoration: underline;}
+        .tabela01 thead td::before {content: attr(title);}
 
         .tabela01 tbody td {padding: 5px;}
         .tabela01 tbody tr:nth-child(odd) {background-color: #FFF;}
         .tabela01 tbody tr:nth-child(even) {background-color: rgba(0,0,0,0.1);}
         .tabela01 tbody tr:hover {background-color: rgba(0,0,0,0.3);}
+        /*
+        :nth-child(xn + c)
+        x é a periodicidade, de quantos em quantos elementos será aplicado o estilo;
+        c é o ponto de partida;
+        n é a variável, que começa em 0 (zero).
+        */
+        .tabela01 tbody tr:nth-child(3n + 1) {color:red;}
 
         .tabela01 tfoot tr {background-color: rgba(0,0,0,0.4);}
-        .tabela01 tfoot td {padding: 10px; text-align: center;}
-        .tabela01 tfoot td ul, .tabela01 tfoot td li {display: inline-block; margin: 0; padding: 0;}
-        .tabela01 tfoot td li a {padding: 5px; background-color: black; color: #FFF;}
-        
+        .tabela01 tfoot td .paginacao {margin: 17px; text-align: center;}
+        .tabela01 tfoot td .paginacao a {padding: 7px;  color: #FFF; text-decoration: none;}
+        .tabela01 tfoot td .paginacao a[href] {background-color: black;}
 
     </style>
 </body>

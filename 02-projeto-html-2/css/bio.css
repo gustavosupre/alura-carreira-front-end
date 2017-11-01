@@ -1,3 +1,11 @@
+.container > p::first-letter {
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;
+}
 .citacao-bio {
     background-color: #D9E5E3;
     border: .5em solid #C2CCCA;
@@ -6,13 +14,41 @@
     width: 30ch;
     box-sizing: border-box;
 }
+.citacao-bio > p {
+    position: relative;
+}
+.citacao-bio::before,
+.citacao-bio::after {
+    position: absolute;
+    font-size: 10em;
+    color: #bbb;
+    line-height: 0.5em;
+}
+.citacao-bio::before {
+    content: '“';
+}
+.citacao-bio::after {
+    content: '"';
+}
+.citacao-bio:hover,
+.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+}
 
-.petrobras {
+.citacao-bio:nth-of-type(odd) {
     float: left;
     margin-left: 0;
 }
+.citacao-bio:nth-of-type(odd):hover,
+.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+}
 
-.fiat {
+.citacao-bio:nth-of-type(even) {
     float: right;
     margin-right: 0;
+}
+.citacao-bio:nth-of-type(even):hover,
+.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
 }
