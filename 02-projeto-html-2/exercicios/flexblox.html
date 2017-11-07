@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fexbox</title>
+</head>
+<body>
+
+        <h1>Fexbox</h1>
+
+            <section>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>ESTAMPADOS E CALCINHA HOT PANT</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+                <div>
+                    <img src="../imagens/eu.jpg">
+                    <p>HOT PANT OU DOBRADA BIQUINI COM BASE EM TECIDO LISO COM DETALHES ESTAMPADOS E CALCINHA HOT PANT DE AMARRAR | PODE USAR DE DUAS FORMAS A CALCINHA - HOT PANT OU DOBRADA</p>
+                    <button>Ver mais</button>
+                </div>
+
+            </section>
+
+            <style>
+                html, body {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                section {
+                    display: flex;
+                    overflow: hidden;
+                    /*
+                    align-items: center;
+                    justify-content: space-between;
+                    */
+                }
+                section div {
+                    display:flex;
+                    flex-direction: column;
+                    flex: 1;
+                    order: 2;
+                    padding: 10px;
+                }
+                section div:nth-child(3) {
+                    order: 1;
+                    flex: 2;
+                }
+                section div p {
+                    flex: 1;
+                }
+
+                div img {width: 100%; height: auto;}
+
+                div:nth-child(1) {background-color: red;}
+                div:nth-child(2) {background-color: blue;}
+                div:nth-child(3) {background-color: pink;}
+
+                button{background-color: black; color: #FFF; padding: 10px; border: none;}
+                /*
+display: flex: ativa o flexbox no elemento;
+align-items: distribui verticalmente os elementos dentro de um container flex;
+justify-content: distribuir os elementos espaçadamente dentro do container;
+flex-direction: permite inverter o align-items;
+order: muda a ordem dos elementos;
+flex: indica a proporção do tamanho dos elementos. Ele é um atalho para mais três propriedades:
+flex-grow: determina quanto o elemento deve crescer;
+flex-shrink: determina quanto o elemento deve diminuir;
+flex-basis: determina o tamanho mínimo do elemento.
+                */
+            </style>
+        </body>
+</html>
