@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criar Objetos - JavaScript</title>
+</head>
+
+<style>
+    main{display:flex;}
+    section {width: 50%;}
+    #lista-convidados li span:first-child {margin-right: 10px;}
+</style>
+
+<body>
+    <h1>Criar Objetos - JavaScript</h1>
+
+    <main>
+        <section>
+			<form id="form-adiciona">
+				<div class="grupo">
+					<label for="nome">Nome:</label>
+					<input id="nome" name="nome" type="text" value="Gustavo">
+                </div>
+
+				<div class="grupo">
+					<label for="idade">Peso:</label>
+					<input id="idade" name="idade" type="text" value="15">
+                </div>
+
+				<button id="adicionar-convidado" class="botao bto-principal">Adicionar</button>
+			</form>
+        </section>
+
+        <section>
+        <ul id="lista-convidados">
+            <li class="convidado">
+                <span class="nome">Douglas</span><span class="idade">23</span>
+            </li>
+            <li class="convidado">
+                <span class="nome">Daniel</span><span class="idade">42</span>
+            </li>
+            <li class="convidado">
+                <span class="nome">Marcos</span><span class="idade">27</span>
+            </li>
+            <li class="convidado">
+                <span class="nome">Flávio</span><span class="idade">18</span>
+            </li>
+        </ul>
+        <div id="total">Total das idades: <span class="total"></span></div>
+        </section>
+    </main>
+    <script>
+        var botaoAdicionaConvidado = document.getElementById("adicionar-convidado");
+        botaoAdicionaConvidado.addEventListener("click", function(event){
+            event.preventDefault();
+
+            var form = document.getElementById("form-adiciona");
+
+            var convidado = obtemConvidadoDoForm(form);
+            var li = liConvidado(convidado);
+
+            var ulListaDeConvidados = document.getElementById("lista-convidados");
+            ulListaDeConvidados.appendChild(li);
+
+            var convidados = criaListaDeConvidados();
+            var totalDasIdades = calculaTotalDasIdades(convidados);
+            exibeTotalDasIdades(totalDasIdades);
+        });
+
+        function obtemConvidadoDoForm (form) {
+            var convidado = {
+                nome: form.nome.value,
+                idade: form.idade.value
+            }
+            return convidado;
+        }
+
+        function liConvidado (convidado) {
+            var li = document.createElement("li");
+            li.classList.add("convidado");
+
+            var spanNome = document.createElement("span");
+            spanNome.classList.add("nome");
+            spanNome.textContent = convidado.nome;
+
+            var spanIdade = document.createElement("span");
+            spanIdade.classList.add("idade");
+            spanIdade.textContent = convidado.idade;
+
+            li.appendChild(spanNome);
+            li.appendChild(spanIdade);
+
+            return li;
+
+        }
+        /*
+        esta função isola a responsabilidade de converter cada elemento do DOM em um convidado.
+        Esse convidado é um objeto JavaScript com as propriedade nome e idade.
+        Se alguém em nosso código quiser ler facilmente a lista de convidados,
+        basta chamar esse método que retornará uma lista de objetos já mastigada para se trabalhar.
+        */
+        function criaListaDeConvidados() {
+
+            var itens = document.querySelectorAll('.convidado');
+
+            var convidados = [];
+
+            for(var i = 0; i < itens.length; i++) {
+
+                var convidado = {
+                    nome:  itens[i].querySelector('.nome').textContent,
+                    idade: parseInt(itens[i].querySelector('.idade').textContent)
+                };
+
+                convidados.push(convidado);
+            }
+
+            return convidados;
+        }
+
+        /*
+        essa função tem como responsabilidade extrair o total da lista de convidados retornando-o para quem chamá-la.
+        Isso é interessante, porque quem receber o resultado pode querer exibir na tela com um `alert`,
+        `console.log` ou até mesmo atualizando essa informação em algum elemento da página.
+        */
+        function calculaTotalDasIdades(convidados) {
+
+            var total = 0;
+
+            for(var i = 0; i < convidados.length; i++) {
+
+                total+=convidados[i].idade;
+            }
+
+            return total;
+
+        }
+
+        /*
+        essa função tem como responsabilidade receber um total qualquer e exibí-lo no HTML
+        */
+        function exibeTotalDasIdades(total) {
+            document.querySelector('.total').textContent = total;
+        }
+
+        /*
+        usando nossas funções. Veja que uma pessoa fora do universo da programação
+        está mais inclinada a entender o que essas instruções fazem devido aos nomes autoexplicativos.
+        */
+        var convidados = criaListaDeConvidados();
+        var totalDasIdades = calculaTotalDasIdades(convidados);
+        exibeTotalDasIdades(totalDasIdades);
+
+    </script>
+</body>
+</html>
