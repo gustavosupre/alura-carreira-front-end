@@ -52,13 +52,21 @@
         </section>
     </main>
     <script>
+
+        function criarObjetoCandidato(nome, idade) {
+            var convidado = {
+                nome: nome,
+                idade: idade
+            }
+            return convidado;
+        }
         var botaoAdicionaConvidado = document.getElementById("adicionar-convidado");
         botaoAdicionaConvidado.addEventListener("click", function(event){
             event.preventDefault();
 
             var form = document.getElementById("form-adiciona");
 
-            var convidado = obtemConvidadoDoForm(form);
+            var convidado = obtemConvidadoDoForm(form.nome.value, form.idade.value);
             var li = liConvidado(convidado);
 
             var ulListaDeConvidados = document.getElementById("lista-convidados");
@@ -69,11 +77,8 @@
             exibeTotalDasIdades(totalDasIdades);
         });
 
-        function obtemConvidadoDoForm (form) {
-            var convidado = {
-                nome: form.nome.value,
-                idade: form.idade.value
-            }
+        function obtemConvidadoDoForm (nome, idade) {
+            var convidado = criarObjetoCandidato(nome, idade);
             return convidado;
         }
 
@@ -108,13 +113,9 @@
             var convidados = [];
 
             for(var i = 0; i < itens.length; i++) {
-
-                var convidado = {
-                    nome:  itens[i].querySelector('.nome').textContent,
-                    idade: parseInt(itens[i].querySelector('.idade').textContent)
-                };
-
+                var convidado = criarObjetoCandidato(itens[i].querySelector('.nome').textContent, parseInt(itens[i].querySelector('.idade').textContent))
                 convidados.push(convidado);
+                console.log(convidado);
             }
 
             return convidados;
