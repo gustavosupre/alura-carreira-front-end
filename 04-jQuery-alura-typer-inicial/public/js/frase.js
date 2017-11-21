@@ -1,23 +1,17 @@
 $("#botao-frase").click(fraseAleatoria);
-$("#botao-frase-id").click(buscaFrase);function buscaFrase() {
-
-//fique a vontade de usar console.log()
-
-$("#spinner").toggle();
-var fraseId = $("#frase-id").val();
-}
+$("#botao-frase-id").click(buscaFrase);
 
 function fraseAleatoria() {
-    $("#spinner").toggle();
+	$("#spinner").toggle();
     $.get("http://localhost:3000/frases", trocaFraseAleatoria)
     .fail(function(){
-        $("#erro").toggle();
-        setTimeout(function(){
-            $("#erro").toggle();
-        },1500);
+    	$("#erro").toggle();
+    	setTimeout(function(){
+    		$("#erro").toggle();
+    	},1500);
     })
     .always(function(){
-        $("#spinner").toggle();
+    	$("#spinner").toggle();
     });
 }
 
@@ -37,7 +31,7 @@ function buscaFrase() {
     var fraseId = $("#frase-id").val();
 
     //criacao do objeto JS que guarda a id
-    var dados = {id : fraseId};
+    var dados = {id : fraseId}; 
 
     //passando objecto como segundo parametro
     $.get("http://localhost:3000/frases", dados, trocaFrase)
@@ -57,7 +51,7 @@ function trocaFrase(data) {
     console.log(data);
 
     var frase = $(".frase");
-    frase.text(data.texto); //cuidado, texto com "o" no final
+    frase.text(data.texto); //cuidado, texto com "o" no final 
     atualizaTamanhoFrase();
     atualizaTempoInicial(data.tempo);
 }
